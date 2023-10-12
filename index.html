@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Registre-se agora em nosso formulário de cadastro de fornecedores e produtos para expandir seus negócios e simplificar o gerenciamento de suas ofertas. Comece a crescer hoje!" />
+  <meta name="author" content="Fransuelton Francisco" />
+  <link rel="stylesheet" href="./src/css/fluig-style-guide.min.css" />
+  <title>VFlows | Cadastro de Fornecedores e Produtos</title>
+</head>
+
+<body>
+  <main class="fluig-style-guide">
+
+    <img src="./src/images/logo.png" alt="Logo VFlows">
+
+    <h1 class="text-center text-uppercase">Cadastro Fornecedor/Produto</h1>
+
+    <section id="supplier-data-form" class="fs-display-flex fs-align-items-center fs-justify-content-center fs-lg-margin-bottom"></section>
+
+    <section id="products" class="fs-display-flex fs-align-items-center fs-justify-content-center fs-flex-direction-column fs-lg-margin-bottom">
+
+      <div class=" fs-width-900 fs-display-flex fs-flex-direction-column fs-align-items-center fs-border fs-border-radius">
+        <legend class="fs-bg-info fs-color-white fs-md-padding-left">Produtos</legend>
+
+        <article id="productRegister" class="fs-height-400 fs-overflow-y-auto"></article>
+        
+        <button id="add-product" class="btn btn-success fs-font-bold fs-width-800 fs-lg-margin-bottom">Adicionar Produto</button>
+      </div>
+    </section>
+
+    <section id="attached-documents" class="fs-display-flex fs-align-items-center fs-justify-content-center fs-flex-direction-column fs-lg-margin-bottom">
+
+      <div class="fs-width-900 fs-border fs-border-radius text-center">
+
+        <legend class="fs-bg-info fs-color-white fs-md-padding-left text-left">Anexos</legend>
+
+        <div id="documentRegister" class="fs-height-200 fs-overflow-y-auto fs-border fs-border-radius fs-md-margin-horizontal fs-lg-margin-bottom">
+          <legend class="text-left fs-md-padding-left fs-color-black">Itens</legend>
+        </div>
+
+        <button id="add-document" class="btn btn-success fs-font-bold fs-width-800 fs-lg-margin-bottom">Incluir Anexo</button>
+      </div>
+    </section>
+
+    <div class="fs-display-flex fs-align-items-center fs-justify-content-center">
+      <button class="btn btn-success fs-font-bold fs-lg-margin-bottom fs-width-900">Salvar Fornecedor</button>
+    </div>
+
+  </main>
+  <script type="module" src="./src/scripts/main.js"></script>
+</body>
+
+</html>
