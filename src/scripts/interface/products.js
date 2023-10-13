@@ -20,32 +20,32 @@ $(document).ready(function () {
         <fieldset class="fs-display-flex">
           <legend class="fs-bg-white fs-no-border-bottom fs-md-padding-left">${productName}</legend>
 
-          <img src="${productBoxImage}" class="fs-display-flex fs-md-margin-right">
+          <img src="${productBoxImage}">
 
           <div class="form-group">
-            <div>
+            <div class="col-xs-12 fs-sm-margin-bottom">
               <label for="descricaoproduto">Produto</label>
-              <input type="text" class="form-control" id="descricaoproduto">
+              <input type="text" class="form-control" id="descricaoproduto" required>
             </div>
 
             <div class="col-xs-3">
-              <label for="pessoacontato">UND. Medida</label>
-              <input type="text" class="form-control" id="pessoacontato">
+              <label for="undmedida">UND. Medida</label>
+              <input type="number" class="form-control fs-no-spin" id="undmedida" required>
             </div>
 
             <div class="col-xs-3">
               <label for="qdtdeemestoque">QDTDE. em Estoque</label>
-              <input type="tel" class="form-control" id="qdtdeemestoque">
+              <input type="number" class="form-control qdtdeemestoque fs-no-spin" id="qdtdeemestoque" required>
             </div>
 
             <div class="col-xs-3">
               <label for="valorunitario">Valor Unitário</label>
-              <input type="email" class="form-control" id="valorunitario">
+              <input type="number" class="form-control valorunitario fs-no-spin" id="valorunitario" required>
             </div>
 
             <div class="col-xs-3">
               <label for="valortotal">Valor Total</label>
-              <input type="email" class="form-control" id="valortotal">
+              <input type="number" class="form-control valortotal fs-no-spin" id="valortotal" readonly>
             </div>
             
           </div>
@@ -63,6 +63,22 @@ $(document).ready(function () {
       if (productCount > 1) {
         productCount--;
       }
+    });
+
+    $(document).ready(function () {
+      $(".valorunitario, .qdtdeemestoque").on("input", function () {
+        $(".valorunitario").each(function (index) {
+          var unitValue = parseFloat($(this).val());
+          var stockQuantity = parseFloat($(".qdtdeemestoque").eq(index).val());
+
+          if (!isNaN(unitValue) && !isNaN(stockQuantity)) {
+            var totalValue = unitValue * stockQuantity;
+            $(".valortotal").eq(index).val(totalValue.toFixed(2));
+          } else {
+            $(".valortotal").eq(index).val("");
+          }
+        });
+      });
     });
   });
 });
