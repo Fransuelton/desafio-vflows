@@ -7,6 +7,7 @@ $(document).ready(function () {
       $("#bairro").val("");
       $("#estado").val("");
       $("#telefone").val("");
+      $("#complemento").val("");
     }
   
     $("#cep").blur(function () {
