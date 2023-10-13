@@ -1,3 +1,5 @@
+import "../services/getApiCep"
+
 document.querySelector("#supplier-data-form").innerHTML = `
     <form class="fs-width-900 fs-border fs-border-radius">
         <fieldset>
@@ -101,3 +103,4 @@ document.querySelector("#supplier-data-form").innerHTML = `
         </fieldset>
     </form>
 `;
+
