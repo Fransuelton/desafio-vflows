@@ -6,6 +6,7 @@ $(document).ready(function () {
       $("#municipio").val("");
       $("#bairro").val("");
       $("#estado").val("");
+      $("#telefone").val("");
     }
   
     $("#cep").blur(function () {
@@ -26,14 +27,14 @@ $(document).ready(function () {
           $.getJSON(
             "https://viacep.com.br/ws/" + cep + "/json/?callback=?",
             function (dados) {
-              console.log(dados);
+              
               if (!("erro" in dados)) {
   
                 $("#endereco").val(dados.logradouro);
                 $("#municipio").val(dados.localidade);
                 $("#bairro").val(dados.bairro);
                 $("#estado").val(dados.uf);
-                $("#telefone").val(dados.ddd);
+                $("#telefone").val(`(${dados.ddd})`);
                 $("#complemento").val(dados.complemento)
   
               } else {
