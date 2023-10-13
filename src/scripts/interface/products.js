@@ -10,17 +10,17 @@ $(document).ready(function () {
 
     const newProduct = $(`
 
-    <div class='product fs-display-flex fs-lg-margin-bottom'>
+    <div class='product fs-display-flex fs-justify-content-center fs-align-items-center fs-lg-margin-bottom'>
 
       <button class='removeProduct btn-link'>
         <img src="${removeImage}" title="Excluir Produto">
       </button>
       
       <form class="fs-border fs-border-radius fs-md-margin-right">
-        <fieldset class="fs-display-flex">
-          <legend class="fs-bg-white fs-no-border-bottom fs-md-padding-left">${productName}</legend>
-
-          <img src="${productBoxImage}">
+      <legend class="fs-bg-white fs-no-border-bottom fs-md-padding-left">${productName}</legend>
+        <fieldset class="fs-display-flex fs-justify-content-center fs-align-items-center ">
+        
+          <img src="${productBoxImage}" width="100px" height="100px">
 
           <div class="form-group">
             <div class="col-xs-12 fs-sm-margin-bottom">
