@@ -11,12 +11,12 @@ document.querySelector("#supplier-data-form").innerHTML = `
 
                 <div class="col-xs-7">
                     <label for="razaosocial">Razão Social</label>
-                    <input type="text" class="form-control" id="razaosocial">
+                    <input type="text" class="form-control" id="razaosocial" required>
                 </div>
 
                 <div class="col-xs-5">
                     <label for="cnpj">CNPJ</label>
-                    <input type="number" class="form-control fs-no-spin" id="cnpj">
+                    <input type="number" class="form-control fs-no-spin" id="cnpj" required>
                 </div>
 
             </div>
@@ -25,7 +25,7 @@ document.querySelector("#supplier-data-form").innerHTML = `
 
                 <div class="col-xs-7">
                     <label for="nomefantasia">Nome Fantasia</label>
-                    <input type="text" class="form-control" id="nomefantasia">
+                    <input type="text" class="form-control" id="nomefantasia" required>
                 </div>
 
                 <div class="col-xs-5">
@@ -39,7 +39,7 @@ document.querySelector("#supplier-data-form").innerHTML = `
 
                 <div class="col-xs-6">
                     <label for="cep">CEP</label>
-                    <input type="number" class="form-control fs-no-spin" id="cep">
+                    <input type="number" class="form-control fs-no-spin" id="cep" required>
                 </div>
 
                 <div class="col-md-offset-2 col-xs-6">
@@ -53,51 +53,51 @@ document.querySelector("#supplier-data-form").innerHTML = `
 
                 <div class="col-xs-7">
                     <label for="endereco">Endereço</label>
-                    <input type="text" class="form-control" id="endereco">
+                    <input type="text" class="form-control" id="endereco" required>
                 </div>
 
                 <div class="col-xs-5">
                     <label for="numero">Número</label>
-                    <input type="number" class="form-control fs-no-spin" id="numero">
+                    <input type="number" class="form-control fs-no-spin" id="numero" required>
                 </div>
 
             </div>
 
             <div class="form-group col-xs-12">
                 <label for="complemento">Complemento</label>
-                <input type="text" class="form-control" id="complemento">
+                <input type="text" class="form-control" id="complemento" required>
             </div>
 
             <div class="form-group row fs-justify-content-space-between fs-display-flex">
 
                 <div class="col-xs-4">
                     <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro">
+                    <input type="text" class="form-control" id="bairro" required>
                 </div>
 
                 <div class="col-xs-4">
                     <label for="municipio">Municipio</label>
-                    <input type="text" class="form-control" id="municipio">
+                    <input type="text" class="form-control" id="municipio" required>
                 </div>
 
                 <div class="col-xs-3">
                     <label for="estado">Estado</label>
-                    <input type="text" class="form-control" id="estado">
+                    <input type="text" class="form-control" id="estado" required>
                 </div>
             </div>
 
             <div class="form-group row fs-justify-content-space-between fs-display-flex">
                 <div class="col-xs-4">
                     <label for="pessoacontato">Nome da Pessoa de Contato</label>
-                    <input type="text" class="form-control" id="pessoacontato">
+                    <input type="text" class="form-control" id="pessoacontato" required>
                 </div>
                 <div class="col-xs-4">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone">
+                    <input type="tel" class="form-control" id="telefone" required>
                 </div>
                 <div class="col-xs-3">
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="email" required>
                 </div>
             </div>
         </fieldset>
@@ -105,7 +105,7 @@ document.querySelector("#supplier-data-form").innerHTML = `
 `;
 
 document.getElementById("telefone").addEventListener("input", function (e) {
-  var input = e.target.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+  var input = e.target.value.replace(/\D/g, "");
 
   var formatted = "";
 
@@ -133,5 +133,5 @@ document.getElementById("telefone").addEventListener("input", function (e) {
     }
   }
 
-  e.target.value = formatted; // Atualiza o valor no campo de entrada
+  e.target.value = formatted;
 });
