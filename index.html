@@ -5,69 +5,120 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Registre-se agora em nosso formulário de cadastro de fornecedores e produtos para expandir seus negócios e simplificar o gerenciamento de suas ofertas. Comece a crescer hoje!" />
+  <meta name="description"
+    content="Registre-se agora em nosso formulário de cadastro de fornecedores e produtos para expandir seus negócios e simplificar o gerenciamento de suas ofertas. Comece a crescer hoje!" />
   <meta name="author" content="Fransuelton Francisco" />
-  <link rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css">
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <title>VFlows | Cadastro de Fornecedores e Produtos</title>
 </head>
 
 <body>
   <main class="fluig-style-guide">
-
     <h1 class="text-center text-uppercase">Cadastro Fornecedor/Produto</h1>
 
-    <section id="supplier-data-form" class="fs-display-flex fs-align-items-center fs-justify-content-center fs-lg-margin-bottom"></section>
+    <form>
+      <section id="supplier-data-form"
+        class="fs-display-flex fs-align-items-center fs-justify-content-center fs-lg-margin-bottom"></section>
 
-    <section id="products" class="fs-display-flex fs-align-items-center fs-justify-content-center fs-flex-direction-column fs-lg-margin-bottom">
+      <section id="products"
+        class="fs-display-flex fs-align-items-center fs-justify-content-center fs-flex-direction-column fs-lg-margin-bottom">
+        <div
+          class="fs-width-900 fs-display-flex fs-flex-direction-column fs-align-items-center fs-border fs-border-radius">
+          <legend class="fs-bg-info fs-color-white fs-md-padding-left">
+            Produtos
+          </legend>
 
-      <div class="fs-width-900 fs-display-flex fs-flex-direction-column fs-align-items-center fs-border fs-border-radius">
+          <article id="productRegister" class="fs-height-400 fs-overflow-y-auto">
+            <div class="product fs-display-flex fs-justify-content-center fs-align-items-center fs-lg-margin-bottom">
+              <button class="removeProduct btn-link" id="first-product-btn">
+                <img src="./src/images/trash.jpg" alt="" />
+              </button>
 
-        <legend class="fs-bg-info fs-color-white fs-md-padding-left">Produtos</legend>
+              <div class="fs-border fs-border-radius fs-md-margin-right">
+                <legend class="fs-bg-white fs-no-border-bottom fs-md-padding-left">
+                  Produto - 1
+                </legend>
+                <fieldset class="fs-display-flex fs-justify-content-center fs-align-items-center">
+                  <img src="./src/images/product-box.png" width="100px" height="100px" />
 
-        <article id="productRegister" class="fs-height-400 fs-overflow-y-auto"></article>
+                  <div class="form-group">
+                    <div class="col-xs-12 fs-sm-margin-bottom">
+                      <label for="descricaoproduto">Produto</label>
+                      <input type="text" class="form-control" id="descricaoproduto" required />
+                    </div>
 
-        <button id="add-product" class="btn btn-success fs-font-bold fs-width-800 fs-lg-margin-bottom">Adicionar Produto</button>
+                    <div class="col-xs-3">
+                      <label for="undmedida">UND. Medida</label>
+                      <input type="number" class="form-control fs-no-spin" id="undmedida" required />
+                    </div>
 
-      </div>
+                    <div class="col-xs-3">
+                      <label for="qdtdeemestoque">QDTDE. em Estoque</label>
+                      <input type="number" class="form-control qdtdeemestoque fs-no-spin" id="qdtdeemestoque"
+                        required />
+                    </div>
 
-    </section>
+                    <div class="col-xs-3">
+                      <label for="valorunitario">Valor Unitário</label>
+                      <input type="number" class="form-control valorunitario fs-no-spin" id="valorunitario" required />
+                    </div>
 
-    <section id="attached-documents" class="fs-display-flex fs-align-items-center fs-justify-content-center fs-flex-direction-column fs-lg-margin-bottom">
+                    <div class="col-xs-3">
+                      <label for="valortotal">Valor Total</label>
+                      <input type="number" class="form-control valortotal fs-no-spin" id="valortotal" readonly />
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </article>
 
-      <div class="fs-width-900 fs-border fs-border-radius">
-
-        <legend class="fs-bg-info fs-color-white fs-md-padding-left text-left">Anexos</legend>
-
-        <div id="documentRegister" class="fs-height-200 fs-overflow-y-auto fs-border fs-border-radius fs-md-margin-horizontal fs-lg-margin-bottom">
-
-          <legend class="text-left fs-md-padding-left fs-color-black fs-position-sticky">Itens</legend>
-
+          <button id="add-product" class="btn btn-success fs-font-bold fs-width-800 fs-lg-margin-bottom">
+            Adicionar Produto
+          </button>
         </div>
+      </section>
 
-        <div class="fs-display-flex fs-align-items-center fs-justify-content-center">
-          
-          <label for="add-document" class="btn btn-success fs-width-800 text-center fs-font-bold fs-lg-margin-bottom">Anexar um arquivo</label>
+      <section id="attached-documents"
+        class="fs-display-flex fs-align-items-center fs-justify-content-center fs-flex-direction-column fs-lg-margin-bottom">
+        <div class="fs-width-900 fs-border fs-border-radius">
+          <legend class="fs-bg-info fs-color-white fs-md-padding-left text-left">
+            Anexos
+          </legend>
 
-          <input type="file" id="add-document" class="fs-display-none" accept=".pdf, .doc, .docx, .png, .jpg, .jpeg" />
+          <div id="documentRegister"
+            class="fs-height-200 fs-overflow-y-auto fs-border fs-border-radius fs-md-margin-horizontal fs-lg-margin-bottom">
+            <legend class="text-left fs-md-padding-left fs-color-black fs-position-sticky">
+              Itens
+            </legend>
+          </div>
 
+          <div class="fs-display-flex fs-align-items-center fs-justify-content-center">
+            <label for="add-document"
+              class="btn btn-success fs-width-800 text-center fs-font-bold fs-lg-margin-bottom">Anexar um
+              arquivo</label>
+
+            <input type="file" id="add-document" class="fs-display-none"
+              accept=".pdf, .doc, .docx, .png, .jpg, .jpeg" />
+          </div>
         </div>
+      </section>
 
+      <div class="fs-display-flex fs-align-items-center fs-justify-content-center">
+        <button class="btn btn-success fs-font-bold fs-lg-margin-bottom fs-width-900" id="save-data"
+          data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Salvar Fornecedor
+        </button>
       </div>
-    </section>
-
-    <div class="fs-display-flex fs-align-items-center fs-justify-content-center">
-
-      <button class="btn btn-success fs-font-bold fs-lg-margin-bottom fs-width-900" id="save-data" data-bs-toggle="modal" data-bs-target="#exampleModal">Salvar Fornecedor</button>
-
-    </div>
-    
+    </form>
   </main>
 
   <div id="modal-area"></div>
 
   <script type="module" src="./src/scripts/main.js"></script>
   <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="https://style.fluig.com/js/fluig-style-guide-docs-index.min.js"></script>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

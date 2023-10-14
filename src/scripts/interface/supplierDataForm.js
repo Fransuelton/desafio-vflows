@@ -1,7 +1,7 @@
 import "../api/viaApiCep";
 
 document.querySelector("#supplier-data-form").innerHTML = `
-    <form class="fs-width-900 fs-border fs-border-radius">
+    <div class="fs-width-900 fs-border fs-border-radius">
         <fieldset>
             <legend class="fs-bg-info fs-color-white fs-md-padding-left">
             Dados do Fornecedor
@@ -101,7 +101,7 @@ document.querySelector("#supplier-data-form").innerHTML = `
                 </div>
             </div>
         </fieldset>
-    </form>
+    </div>
 `;
 
 document.getElementById("telefone").addEventListener("input", function (e) {
