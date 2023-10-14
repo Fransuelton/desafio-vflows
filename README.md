@@ -24,6 +24,7 @@
   - [🎲 Funcionalidades](#-funcionalidades)
   - [🛠️ Tecnologias e Ferramentas Utilizadas](#️-tecnologias-e-ferramentas-utilizadas)
 - [▶️ Como rodar o projeto ?](#️-como-rodar-o-projeto-)
+- [🎨 Figma](#-figma)
 - [🧑‍💻 Autor](#-autor)
 
 ## 🚀 Sobre o Projeto
@@ -116,6 +117,10 @@ $ npm install
 $ npm run dev
 ```
 
+## 🎨 Figma
+
+Para acessar o protótipo Figma que elaborei como guia para o desenvolvimento seguindo o Layout original <a href="https://www.figma.com/file/kw00m2yEwTanihSYggHwbm/Desafio-VFLOWS?type=design&node-id=0%3A1&mode=design&t=de7blwrXJrQPf5r5-1">Clique aqui</a>
+
 ## 🧑‍💻 Autor
 
 - Fransuelton - Desenvolvedor Front-End
@@ -123,9 +128,7 @@ $ npm run dev
 
 <h3>📫 Entre em contato comigo:</h3>
 
-<a href="https://www.linkedin.com/in/fransuelton/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
-">
-</a>
+<a href="https://www.linkedin.com/in/fransuelton/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
 <a href="mailto:elton6103@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
 
 <h3> Obrigado por visitar meu repositório! ❤️ </h3>
