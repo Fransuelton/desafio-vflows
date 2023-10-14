@@ -1,6 +1,7 @@
 import $ from "jquery";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
+import { saveData } from "../services/saveData";
 
 $(document).ready(function () {
   let modalCreated = false;
@@ -25,8 +26,8 @@ $(document).ready(function () {
                 </div>
                 <div id="content-container" style="display: none;">
                     <h6>Fornecedor Cadastrado com sucesso!</h2> 
-                    <p>Razão Social: ${$("#razaosocial").val()}</p>
-                    <p>CNPJ: ${$("#cnpj").val()}</p>
+                    <p>Razão Social: <span id="razaosocial-value"></span></p>
+                    <p>CNPJ: <span id="cnpj-value"></span></p>
                     <p>Data de Cadastro: <span id="data-cadastro"></span></p>
                     
                     <p>As demais informações foram encaminhadas para o console do seu navegador.</p>
@@ -53,10 +54,36 @@ $(document).ready(function () {
     const dataFormatada = dataAtual.toLocaleDateString();
 
     $("#data-cadastro").text(dataFormatada);
+    $("#razaosocial-value").text($("#razaosocial").val());
+    $("#cnpj-value").text($("#cnpj").val());
 
     setTimeout(function () {
       spinnerContainer.hide();
       contentContainer.show();
+
+      saveData();
+
+      $("#razaosocial").val("");
+      $("#nomefantasia").val("");
+      $("#cep").val("");
+      $("#cnpj").val("");
+      $("#endereco").val("");
+      $("#complemento").val("");
+      $("#bairro").val("");
+      $("#estado").val("");
+      $("#municipio").val("");
+      $("#numero").val("");
+      $("#estado").val("");
+      $("#inscricaoestadual").val("");
+      $("#inscricaomunicipal").val("");
+      $("#pessoacontato").val("");
+      $("#telefone").val("");
+      $("#email").val("");
+      $("#descricaoproduto").val("");
+      $("#undmedida").val("");
+      $("#qdtdeemestoque").val("");
+      $("#valorunitario").val("");
+      $("#valortotal").val("");
     }, 3000);
   });
 });
