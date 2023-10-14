@@ -7,6 +7,17 @@ $(document).ready(function () {
   let attachments = [];
 
   $("#add-document").change(function () {
+    const addFluigToast = (title, type, timeout) => {
+      FLUIGC.toast({
+        title: `${title}`,
+        message: "",
+        type: `${type}`,
+        timeout: `${timeout}`,
+      });
+    };
+
+    addFluigToast("Novo documento salvo com sucesso!", "success", "fast");
+
     const files = $(this)[0].files;
 
     for (let i = 0; i < files.length; i++) {
@@ -26,7 +37,8 @@ $(document).ready(function () {
             <img src="${downloadImage}" title="Baixar Anexo">
           </a>
           <p class="fs-font-bold fs-text-lg fs-color-black fs-xs-margin">${documentName}</p>
-        </div>`);
+        </div>
+      `);
 
       newDocument.appendTo("#documentRegister");
       documentCount++;

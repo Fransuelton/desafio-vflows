@@ -3,23 +3,22 @@ import removeImage from "../../images/trash.jpg";
 import productBoxImage from "../../images/product-box.png";
 
 $(document).ready(function () {
-  let productCount = 1;
+  let productCount = 2;
 
   $("#add-product").click(function () {
     const productName = "Produto - " + productCount;
 
     const newProduct = $(`
 
-    <div class='product fs-display-flex fs-justify-content-center fs-align-items-center fs-lg-margin-bottom'>
+    <section class='product fs-display-flex fs-justify-content-center fs-align-items-center fs-lg-margin-bottom'>
 
       <button class='removeProduct btn-link'>
         <img src="${removeImage}" title="Excluir Produto">
       </button>
       
-      <form class="fs-border fs-border-radius fs-md-margin-right">
+      <section class="fs-border fs-border-radius fs-md-margin-right">
       <legend class="fs-bg-white fs-no-border-bottom fs-md-padding-left">${productName}</legend>
         <fieldset class="fs-display-flex fs-justify-content-center fs-align-items-center ">
-        
           <img src="${productBoxImage}" width="100px" height="100px">
 
           <div class="form-group">
@@ -50,9 +49,20 @@ $(document).ready(function () {
             
           </div>
         </fieldset>
-      </form>   
-    </div>
+      </section>   
+    </section>
 `);
+
+    const addFluigToast = (title, type, timeout) => {
+      FLUIGC.toast({
+        title: `${title}`,
+        message: "",
+        type: `${type}`,
+        timeout: `${timeout}`,
+      });
+    };
+
+    addFluigToast("Novo Produto adicionado!", "success", "fast");
 
     newProduct.appendTo("#productRegister");
     productCount++;
@@ -60,7 +70,7 @@ $(document).ready(function () {
     newProduct.find(".removeProduct").click(function () {
       $(this).closest(".product").remove();
 
-      if (productCount > 1) {
+      if (productCount > 2) {
         productCount--;
       }
     });
