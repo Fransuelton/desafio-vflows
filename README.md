@@ -93,12 +93,7 @@ Neste projeto, empreguei as seguintes tecnologias e ferramentas:
 
 <br>
 
-- <img align='center' height='50' width='50' title='JavaScript' alt='javascript' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' /><img align='center' height='50' width='50' title='HTML5' alt='html' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' />
-<img align='center' height='50' width='50' title='CSS' alt='css' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' />
-<img align='center' height='50' width='50' title='jQuery' alt='jquery' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg' />
-<img align='center' height='50' width='50' title='Bootstrap' alt='bootstrap' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' />
-<img src="https://skillicons.dev/icons?i=vite" height='50' width='50' alt="vite" title="vite" align='center'>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height='50' width='50' alt="figma" title="figma" align='center'>
+- <img align='center' height='50' width='50' title='JavaScript' alt='javascript' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' /><img align='center' height='50' width='50' title='HTML5' alt='html' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' /><img align='center' height='50' width='50' title='CSS' alt='css' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' /><img align='center' height='50' width='50' title='jQuery' alt='jquery' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg' /><img align='center' height='50' width='50' title='Bootstrap' alt='bootstrap' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' /><img src="https://skillicons.dev/icons?i=vite" height='50' width='50' alt="vite" title="vite" align='center'><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height='50' width='50' alt="figma" title="figma" align='center'>
 
 ## ▶️ Como rodar o projeto ?
 
@@ -129,7 +124,8 @@ $ npm run dev
 <h3>📫 Entre em contato comigo:</h3>
 
 <a href="https://www.linkedin.com/in/fransuelton/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
-"></a>
+">
+</a>
 <a href="mailto:elton6103@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
 
 <h3> Obrigado por visitar meu repositório! ❤️ </h3>
